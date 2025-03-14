@@ -23,7 +23,7 @@ export const SiteHeader = () => {
           <div className="center-section">
             <img src={HealthyFoods} alt="Healthy Foods Logo" style={{ height: "100px", cursor: "pointer", marginRight: "10px" }} onClick={() => navigate("/")} />
             <h1 style={{ cursor: "pointer" }} onClick={() => navigate("/")}>
-              Food Delivery Service
+              Retro Football Shirts
             </h1>
           </div>
           <div className="right-section">
@@ -42,7 +42,7 @@ export const SiteHeader = () => {
         </Row>
         <Row className="centered-buttons">
           <button className="large-button" onClick={() => navigate("/")}>Home</button>
-          <button className="large-button" onClick={() => navigate("/meals")}>Meals</button> {/* Add Meals button */}
+          <button className="large-button" onClick={() => navigate("/shirts")}>Shirts</button> {/* Add Meals button */}
           <button className="large-button" onClick={() => navigate("/contact")}>Contact Us</button>
           <button className="large-button" onClick={() => navigate("/about")}>About Us</button>
         </Row>

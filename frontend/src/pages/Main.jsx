@@ -1,23 +1,26 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Import the useNavigate hook
-import eatImage from '../assets/eating.png'; // Import the image
 import './Main.css'; // Import the CSS file
 
 export const Main = () => {
-  const navigate = useNavigate(); // Initialize the useNavigate hook
-
-  const handleButtonClick = () => {
-    navigate('/meals'); // Navigate to the Meals page
-  };
-
   return (
     <div className="container">
-      <div className="hero-section" style={{ backgroundImage: `url(${eatImage})` }}>
-        <div>
-          <h1>Delicious Meals Delivered with Care</h1>
-          <p>Bringing comfort and nutrition right to your doorstep</p>
-          <button onClick={handleButtonClick}>Browse Our Menu</button>
-        </div>
+      <h1>CLUB RETROS</h1>
+      <hr />
+      <div className="content">
+        <h2>Welcome to Club Retros!</h2>
+        <p>
+          At Club Retros, we are passionate about football and dedicated to bringing you the largest collection of retro football shirts in the world! Whether you're a die-hard fan or just love the nostalgia of classic kits, we have something for everyone.
+        </p>
+        <h2>Our Collection</h2>
+        <p>
+          Explore our extensive range of iconic shirts from the 80s, 90s, and beyond. We stock classics from UK teams, European giants, other teams from around the world and international favourites.
+        </p>
+        <p>
+          We offer free international delivery on all orders! For more details on our processing and delivery times, please read our <a href="/shipping">shipping page</a>.
+        </p>
+        <p>
+          You can view our size guide <a href="/size-guide">here</a>. If you have any questions not answered on our website, please head to our <a href="/contact">contact page</a> to fill in our enquiry form.
+        </p>
       </div>
     </div>
   );
