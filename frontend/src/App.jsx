@@ -12,26 +12,31 @@ import About from "./pages/About"; // Import About as default
 import { Shirts } from "./pages/Shirts"; // Import Meals
 import { CurrentUserProvider } from "./context/CurrentUserProvider"; // Import CurrentUserProvider
 import { ThemeProvider } from "./context/ThemeContext"; // Import ThemeProvider
+import { ZoomProvider } from "./context/ZoomContext"; // Import ZoomProvider
+import { ZoomControls } from "./components/ZoomControls"; // Import ZoomControls
 import "./pages/Main.css"; // Import Main.css
 
 function App() {
   return (
     <CurrentUserProvider>
       <ThemeProvider>
-        <Router>
-          <Column>
-            <SiteHeader />
-            <Routes>
-              <Route path="/" element={<Main />} />
-              <Route path="/check-out" element={<CheckOut />} />
-              <Route path="/orders" element={<ViewOrders />} />
-              <Route path="/add-product" element={<AddProduct />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/shirts" element={<Shirts />} /> {/* Add Meals route */}
-            </Routes>
-          </Column>
-        </Router>
+        <ZoomProvider>
+          <Router>
+            <Column>
+              <SiteHeader />
+              <Routes>
+                <Route path="/" element={<Main />} />
+                <Route path="/check-out" element={<CheckOut />} />
+                <Route path="/orders" element={<ViewOrders />} />
+                <Route path="/add-product" element={<AddProduct />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/shirts" element={<Shirts />} /> {/* Add Meals route */}
+              </Routes>
+              <ZoomControls />
+            </Column>
+          </Router>
+        </ZoomProvider>
       </ThemeProvider>
     </CurrentUserProvider>
   );

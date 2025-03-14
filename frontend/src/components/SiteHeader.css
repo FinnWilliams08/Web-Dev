@@ -4,6 +4,12 @@
   width: 100%; /* Ensure the row takes the full width */
 }
 
+h1{
+  justify-content: center;
+  align-items: center;
+  text-decoration: underline;
+  padding-left: 120px;
+}
 .header-row {
   display: flex;
   justify-content: space-between;

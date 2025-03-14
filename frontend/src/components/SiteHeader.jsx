@@ -8,7 +8,6 @@ import { Row } from "./Row";
 import { SignUp } from "./SignUp";
 import { ViewCart } from "./ViewCart";
 import "./SiteHeader.css"; // Import the CSS file for styling
-import HealthyFoods from "../assets/healthyfoods.png";
 
 export const SiteHeader = () => {
   const [currentUser, , setToken] = useContext(CurrentUserContext);
@@ -21,7 +20,6 @@ export const SiteHeader = () => {
             <ViewCart />
           </div>
           <div className="center-section">
-            <img src={HealthyFoods} alt="Healthy Foods Logo" style={{ height: "100px", cursor: "pointer", marginRight: "10px" }} onClick={() => navigate("/")} />
             <h1 style={{ cursor: "pointer" }} onClick={() => navigate("/")}>
               Retro Football Shirts
             </h1>

@@ -9,12 +9,9 @@ export const ImageModal = ({ isOpen, onClose, imageSource, alt, title, descripti
   const textColor = theme === 'light' ? 'black' : 'white';
 
   return (
-    <div style={styles.overlay}>
-      <div style={styles.modal}>
-        <button onClick={onClose} style={styles.closeButton}>Close</button>
+    <div style={styles.overlay} onClick={onClose}>
+      <div style={styles.modal} onClick={(e) => e.stopPropagation()}>
         <img src={imageSource} alt={alt} title={title} style={styles.image} />
-        <h3 style={{ color: textColor }}>{title}</h3>
-        <p style={{ color: textColor }}>{description}</p>
       </div>
     </div>
   );
@@ -36,21 +33,21 @@ const styles = {
     backgroundColor: 'black',
     padding: '20px',
     borderRadius: '8px',
-    maxWidth: '20%', // Increase the max width of the modal
-    width: '20%', // Increase the width of the modal
+    maxWidth: '30%', // Increase the max width of the modal
+    width: '30%', // Increase the width of the modal
     position: 'relative',
   },
   closeButton: {
     position: 'absolute',
-    top: '10px',
-    right: '10px',
+    top: '20px',
     background: 'none',
     border: 'none',
-    fontSize: '16px',
+    fontSize: '20px',
     cursor: 'pointer',
+    color: 'black',
   },
   image: {
     width: '100%', // Make the image take up the full width of the modal
-    height: 'auto', // Maintain
+    height: 'auto', // Maintain aspect ratio
   },
 };
