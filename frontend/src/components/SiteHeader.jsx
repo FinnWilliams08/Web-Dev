@@ -1,0 +1,52 @@
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { CartContext } from "../context/CartProvider";
+import { CurrentUserContext } from "../context/CurrentUserProvider";
+import { Column } from "./Column";
+import { LogIn } from "./LogIn";
+import { Row } from "./Row";
+import { SignUp } from "./SignUp";
+import { ViewCart } from "./ViewCart";
+import "./SiteHeader.css"; // Import the CSS file for styling
+import HealthyFoods from "../assets/healthyfoods.png";
+
+export const SiteHeader = () => {
+  const [currentUser, , setToken] = useContext(CurrentUserContext);
+  const navigate = useNavigate();
+  return (
+    <div className="container">
+      <Column>
+        <Row className="header-row">
+          <div className="left-section">
+            <ViewCart />
+          </div>
+          <div className="center-section">
+            <img src={HealthyFoods} alt="Healthy Foods Logo" style={{ height: "100px", cursor: "pointer", marginRight: "10px" }} onClick={() => navigate("/")} />
+            <h1 style={{ cursor: "pointer" }} onClick={() => navigate("/")}>
+              Food Delivery Service
+            </h1>
+          </div>
+          <div className="right-section">
+            {currentUser ? (
+              <>
+                <button onClick={() => navigate("/orders")}>View Orders</button>
+                <button onClick={() => setToken(null)}>Sign Out</button>
+              </>
+            ) : (
+              <>
+                <SignUp />
+                <LogIn />
+              </>
+            )}
+          </div>
+        </Row>
+        <Row className="centered-buttons">
+          <button className="large-button" onClick={() => navigate("/")}>Home</button>
+          <button className="large-button" onClick={() => navigate("/meals")}>Meals</button> {/* Add Meals button */}
+          <button className="large-button" onClick={() => navigate("/contact")}>Contact Us</button>
+          <button className="large-button" onClick={() => navigate("/about")}>About Us</button>
+        </Row>
+      </Column>
+    </div>
+  );
+};

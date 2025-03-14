@@ -1,0 +1,92 @@
+.row {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Ensure the row takes the full width */
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px; /* Add padding to the sides */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Add space between items in the left section */
+}
+
+.center-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  gap: 10px; /* Add space between items in the center section */
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Add space between items in the right section */
+}
+
+.centered-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%; /* Ensure the row takes the full width */
+}
+
+.large-button {
+  font-size: 20px;
+  padding: 10px 80px; /* Increase padding to make buttons longer */
+  margin: 0 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.large-button:hover {
+  background-color: #0056b3;
+}
+
+.centered-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.centered-text h1 {
+  font-size: 2.5rem;
+  color: var(--header-text-color);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .center-section {
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+
+  .centered-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .large-button {
+    margin: 10px 0;
+  }
+}
