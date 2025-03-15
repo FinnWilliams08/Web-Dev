@@ -6,7 +6,6 @@ export const Modal = ({ children, setVisibility }) => {
     <div>
       <div
         style={{
-          backgroundColor: "rgba(0,0,0,0.8)",
           width: "100vw",
           height: "100vh",
           zIndex: 0,
