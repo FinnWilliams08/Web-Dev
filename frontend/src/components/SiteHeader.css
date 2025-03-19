@@ -10,11 +10,28 @@ h1{
   text-decoration: underline;
   padding-left: 120px;
 }
+
+/* Ensure the header takes up the full width of the screen */
+.header-container {
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .header-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  max-width: 1200px; /* Limit the maximum width of the header content */
   padding: 0 20px; /* Add padding to the sides */
   box-sizing: border-box; /* Include padding in the element's total width and height */
 }
@@ -42,13 +59,13 @@ h1{
 .centered-buttons {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 10px;
   width: 100%; /* Ensure the row takes the full width */
 }
 
 .large-button {
-  font-size: 20px;
-  padding: 10px 80px; /* Increase padding to make buttons longer */
+  font-size: 16px;
+  padding: 10px 20px; /* Increase padding to make buttons longer */
   margin: 0 10px;
   background-color: #007bff;
   color: white;
@@ -73,6 +90,36 @@ h1{
 .centered-text h1 {
   font-size: 2.5rem;
   color: var(--header-text-color);
+}
+
+.container {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.left-section,
+.center-section,
+.right-section {
+  display: flex;
+  align-items: center;
+}
+
+.center-section img {
+  margin: 0 auto;
+}
+
+.logo {
+  cursor: pointer;
+  height: 150px; /* Adjust the height as needed */
+  padding-left: 120px;
+}
+
+/* Set the background color of the body to dark grey */
+body {
+  background-color: #333; /* Dark grey color */
+  color: white; /* Ensure text is readable on dark background */
 }
 
 /* Media Queries for Responsiveness */

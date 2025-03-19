@@ -25,7 +25,7 @@ export const sampleProductsList = [
     alt: "Arsenal 2008 Shirt",
     imageSource: arsenal2008,
     price: 39.99,
-    description: "The Arsenal 2008 home kit, worn by legends like Cesc Fàbregas. A stylish and modern take on the club’s traditional red and white colors. Available in size M.",
+    description: "The Arsenal 2008 home kit, worn by legends like Cesc Fàbregas. A stylish and modern take on the club’s traditional red and white colours. Available in size M.",
     availability: true,
   },
   {
@@ -52,7 +52,7 @@ export const sampleProductsList = [
     alt: "Liverpool 1998 Shirt",
     imageSource: lfc98,
     price: 49.99,
-    description: "A legendary Liverpool home shirt from 1998, featuring the traditional red kit with white trim. A favorite among Reds fans. Available in size L.",
+    description: "A legendary Liverpool home shirt from 1998, featuring the traditional red kit with white trim. A favourite among Reds fans. Available in size L.",
     availability: true,
   },
   {
