@@ -1,97 +1,157 @@
-.container {
-    max-width: 100%;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .hero-section {
-      background-size: cover;
-      background-position: center;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-align: center;
-    }
-  
-  .hero-section div {
-    margin-bottom: 40px; /* Add margin to the bottom */
-  }
-  
-  .hero-section h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  
-  .hero-section p {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .hero-section button {
-    padding: 10px 20px;
-    background-color: green;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .hero-section button:hover {
-    background-color: darkgreen;
-  }
-  
-  /* Media Queries for Responsiveness */
-  @media (max-width: 768px) {
-    .hero-section {
-      height: auto;
-      padding: 40px 20px;
-    }
-  
-    .hero-section h1 {
-      font-size: 2rem;
-    }
-  
-    .hero-section p {
-      font-size: 1.2rem;
-    }
-  
-    .hero-section button {
-      font-size: 1rem;
-      padding: 8px 16px;
-    }
-  }
-
-h1 {
-  font-size: 3em;
-  color: white;
+.maincontainer {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
 }
 
-hr {
-  width: 50%;
-  margin: 20px auto;
-  border: 1px solid blue;
+.hero-section {
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  color: #555;
 }
 
 .content {
-  text-align: left;
-  margin: 0 auto;
-  max-width: 800px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-section, .collection-section, .shipping-section, .size-guide-section, .testimonials-section, .newsletter-section {
+  margin-bottom: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+hr {
+  margin: 20px 0;
 }
 
 h2 {
-  font-size: 2em;
-  color: white;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
 }
 
 p {
-  font-size: 1.2em;
-  color: white;
+  font-size: 1rem;
+  color: #666;
   line-height: 1.6;
 }
 
 a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.retro-shirt-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.image-container {
+  position: relative;
+  text-align: center;
+}
+
+.players-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.browse-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #007bff;
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.browse-button:hover {
+  background-color: #0056b3;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.newsletter-form input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.newsletter-form button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #0056b3;
+}
+
+.footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  margin: 10px 0;
+}
+
+.footer-content a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
   text-decoration: underline;
 }

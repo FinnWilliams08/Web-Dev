@@ -44,8 +44,10 @@ export const SiteHeader = () => {
       <Row className="centered-buttons">
         <button className="large-button" onClick={() => navigate("/")}>Home</button>
         <button className="large-button" onClick={() => navigate("/shirts")}>Shirts</button>
+        <button className="large-button" onClick={() => navigate("/sale")}>SALE</button>
+        <button className="large-button" onClick={() => navigate("/about")}>About</button>
         <button className="large-button" onClick={() => navigate("/contact")}>Contact Us</button>
-        <button className="large-button" onClick={() => navigate("/about")}>About Us</button>
+
       </Row>
     </div>
   );

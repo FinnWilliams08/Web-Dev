@@ -13,10 +13,13 @@
   font-size: 2.5em;
   margin-bottom: 10px;
 }
+p{
+  color: white;
+}
 
 .about-hero .tagline {
   font-size: 1.2em;
-  color: #666;
+  color: white;
 }
 
 .about-story,

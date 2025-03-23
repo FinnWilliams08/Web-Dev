@@ -1,13 +1,13 @@
-import { Column } from "./Column";
-import { Row } from "./Row";
-import { Image } from "./Image";
-import { useContext, useState } from "react";
-import { CartContext } from "../context/CartProvider";
-import { updateItemInCart } from "../utils/cartManagement";
-import { ImageModal } from "./ImageModal";
-import './ProductCard.css'; // Import the CSS file
+import React, { useContext, useState } from 'react';
+import { Column } from './Column';
+import { Row } from './Row';
+import { Image } from './Image';
+import { CartContext } from '../context/CartProvider';
+import { updateItemInCart } from '../utils/cartManagement';
+import { ImageModal } from './ImageModal';
+import './SaleProductCard.css';
 
-export const ProductCard = ({ product }) => {
+export const SaleProductCard = ({ product }) => {
   const [cartItems, setCartItems] = useContext(CartContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
@@ -31,7 +31,7 @@ export const ProductCard = ({ product }) => {
 
   return (
     <>
-      <Column className="product-card">
+      <Column className="saleproduct-card">
         <Image 
           src={imageSource} 
           alt={alt} 
@@ -42,7 +42,7 @@ export const ProductCard = ({ product }) => {
         <h3 className="product-title">{title}</h3>
         <p className="product-description">{description}</p>
         <Row className="product-info">
-          <h4>£{price}</h4>
+          <h4 className="product-price">£{price}</h4>
           {!availability && (
             <p className="out-of-stock">Out of Stock</p>
           )}
@@ -64,7 +64,7 @@ export const ProductCard = ({ product }) => {
         title={title} 
         description={description} 
       />
-      
+
       {showPopup && (
         <div className="popup-message">
           Product added to cart!

@@ -10,6 +10,7 @@ import { AddProduct } from "./pages/AddProduct";
 import Contact from "./pages/Contact"; // Import Contact as default
 import About from "./pages/About"; // Import About as default
 import { Shirts } from "./pages/Shirts"; // Import Meals
+import { Sale } from "./pages/Sale"; // Import Sale
 import { CurrentUserProvider } from "./context/CurrentUserProvider"; // Import CurrentUserProvider
 import { ThemeProvider } from "./context/ThemeContext"; // Import ThemeProvider
 import { ZoomProvider } from "./context/ZoomContext"; // Import ZoomProvider
@@ -32,6 +33,7 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/shirts" element={<Shirts />} /> {/* Add Meals route */}
+                <Route path="/sale" element={<Sale />} /> {/* Add Sale route */}
               </Routes>
               <ZoomControls />
             </Column>

@@ -7,9 +7,9 @@ import lfc98 from "../assets/lfc98.png";
 import lfc1995 from "../assets/lfc1995.png";
 import lfc2000 from "../assets/lfc2000.png";
 import lfcgerrard from "../assets/lfcgerrard.png";
-
 // Sample products list
 export const sampleProductsList = [
+  
   {
     id: "1",
     title: "Arsenal 1991 Home Shirt",

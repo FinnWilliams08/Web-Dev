@@ -17,11 +17,13 @@ export const Shirts = () => {
   return (
     <div className="meals-container">
       <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} placeholder="Search Shirts" />
-      <div className="filter-buttons">
-        <button onClick={() => setFilter('')}>All</button>
-        <button onClick={() => setFilter('Liverpool')}>Liverpool</button>
-        <button onClick={() => setFilter('Arsenal')}>Arsenal</button>
-        <button onClick={() => setFilter('Chelsea')}>Chelsea</button>
+      <div className="filter-dropdown">
+        <select onChange={(e) => setFilter(e.target.value)} value={filter}>
+          <option value="">All</option>
+          <option value="Liverpool">Liverpool</option>
+          <option value="Arsenal">Arsenal</option>
+          <option value="Chelsea">Chelsea</option>
+        </select>
       </div>
       <h5>Shirts</h5>
       <div className="product-cards-container">

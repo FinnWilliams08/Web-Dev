@@ -10,7 +10,6 @@ export const Modal = ({ children, setVisibility }) => {
           height: "100vh",
           zIndex: 0,
           top: "50%",
-          left: "50%",
           transform: "translate(-50%, -50%)",
           position: "absolute",
         }}
@@ -19,7 +18,7 @@ export const Modal = ({ children, setVisibility }) => {
       <Column
         style={{
           position: "fixed",
-          top: "50%",
+          top: "20%",
           left: "50%",
           minWidth: "60vw",
           maxHeight: "90vh",
