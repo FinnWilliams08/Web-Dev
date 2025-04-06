@@ -1,7 +1,48 @@
 #root {
   max-width: 2000px;
-margin: 0 auto;
+  margin: 0 auto;
   text-align: center;
+}
+
+/* Global container styles */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Responsive typography */
+h1 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive buttons */
+button {
+  font-size: 1rem;
+  padding: 10px 20px;
+}
+
+@media (max-width: 768px) {
+  button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
 }
 
 

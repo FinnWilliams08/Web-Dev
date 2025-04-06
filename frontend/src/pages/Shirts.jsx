@@ -23,6 +23,11 @@ export const Shirts = () => {
           <option value="Liverpool">Liverpool</option>
           <option value="Arsenal">Arsenal</option>
           <option value="Chelsea">Chelsea</option>
+          <option value="Huddersfield">Huddersfield</option>
+          <option value="Leeds">Leeds</option>
+          <option value="Austria">Austria</option>
+          <option value="Germany">Germany</option>
+          <option value="Dortmund">Dortmund</option>
         </select>
       </div>
       <h5>Shirts</h5>

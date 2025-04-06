@@ -5,15 +5,9 @@ import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 
 export const Main = () => {
   return (
-    <div className="maincontainer">
-      <h1>CLUB RETROS</h1>
-      <div className="image-container">
-        <img src={playersImage} alt="Football Players" className="players-image" />
-        <Link to="/shirts" className="browse-button">Browse Shirts</Link>
-      </div>
+    <div className="maincontainer">     
       <hr />
       <div className="content">
-        <h2>Welcome to Club Retros!</h2>
         <p>
           At Club Retros, we are passionate about football and dedicated to bringing you the largest collection of retro football shirts in the world! Whether you're a die-hard fan or just love the nostalgia of classic kits, we have something for everyone.
         </p>
@@ -27,6 +21,10 @@ export const Main = () => {
         <p>
           You can view our size guide. If you have any questions not answered on our website, please head to our <a href="/contact">contact page</a> to fill in our enquiry form.
         </p>
+      </div>
+      <div className="image-container">
+        <img src={playersImage} alt="Football Players" className="players-image" />
+        <Link to="/shirts" className="browse-button">Browse Shirts</Link>
       </div>
       <footer className="footer">
         <div className="footer-content">

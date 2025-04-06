@@ -55,6 +55,26 @@
   justify-content: center;
 }
 
+.product-card {
+  flex: 1 1 calc(33.333% - 20px); /* 3 cards per row */
+  max-width: calc(33.333% - 20px);
+  box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+  .product-card {
+    flex: 1 1 calc(50% - 20px); /* 2 cards per row */
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    flex: 1 1 100%; /* 1 card per row */
+    max-width: 100%;
+  }
+}
+
 h5 {
   color: #ff7e5f;
   font-size: 40px;

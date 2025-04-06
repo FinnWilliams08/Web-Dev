@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 400px;
-  height: auto;
+  width: 100%;
+  max-width: 400px;
   margin: 8px;
   padding: 20px;
   border: 5px solid darkgray; /* Dark gray border for ProductCard */
@@ -86,4 +86,10 @@
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    max-width: 100%;
+  }
 }

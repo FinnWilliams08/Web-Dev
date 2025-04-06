@@ -11,11 +11,12 @@ h1{
   padding-left: 120px;
 }
 
-/* Ensure the header takes up the full width of the screen */
+/* Base Styles */
 .header-container {
   width: 100%;
   padding: 10px;
-  background-color: white;
+  background-color: #333; /* Dark background for the header */
+  color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
   top: 0;
@@ -34,39 +35,41 @@ h1{
   max-width: 1200px; /* Limit the maximum width of the header content */
   padding: 0 20px; /* Add padding to the sides */
   box-sizing: border-box; /* Include padding in the element's total width and height */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
-.left-section {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* Add space between items in the left section */
-}
-
-.center-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-  gap: 10px; /* Add space between items in the center section */
-}
-
+.left-section,
+.center-section,
 .right-section {
   display: flex;
   align-items: center;
-  gap: 10px; /* Add space between items in the right section */
+  gap: 10px; /* Add space between items */
 }
 
+.center-section {
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.logo {
+  cursor: pointer;
+  height: 150px; /* Default logo size */
+  padding-left: 150px;
+}
+
+/* Navigation Buttons */
 .centered-buttons {
   display: flex;
   justify-content: center;
   margin-top: 10px;
   width: 100%; /* Ensure the row takes the full width */
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .large-button {
-  font-size: 16px;
+  font-size: 1rem;
   padding: 10px 20px; /* Increase padding to make buttons longer */
-  margin: 0 10px;
   background-color: #007bff;
   color: white;
   border: none;
@@ -99,23 +102,6 @@ h1{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.left-section,
-.center-section,
-.right-section {
-  display: flex;
-  align-items: center;
-}
-
-.center-section img {
-  margin: 0 auto;
-}
-
-.logo {
-  cursor: pointer;
-  height: 150px; /* Adjust the height as needed */
-  padding-left: 120px;
-}
-
 /* Set the background color of the body to dark grey */
 body {
   background-color: #333; /* Dark grey color */
@@ -123,23 +109,77 @@ body {
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 768px) {
+
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
   .header-row {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
   }
 
   .center-section {
-    justify-content: flex-start;
+    justify-content: center; /* Center the logo */
+    margin-top: 10px;
+  }
+
+  .logo {
+    height: 80px; /* Reduce logo size for tablets */
+    padding-left: 0;
+  }
+
+  .right-section {
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .header-row {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center;
+  }
+
+  .center-section {
+    justify-content: center;
     margin-top: 10px;
   }
 
   .centered-buttons {
-    flex-direction: column;
+    flex-direction: column; /* Stack buttons vertically */
     align-items: center;
+    gap: 15px; /* Add spacing between buttons */
   }
 
   .large-button {
-    margin: 10px 0;
+    width: 80%; /* Make buttons wider but not full width */
+    text-align: center;
+  }
+
+  .logo {
+    height: 60px; /* Further reduce logo size for mobile */
+  }
+
+  .right-section {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    justify-content: center;
+  }
+}
+
+/* Very Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .large-button {
+    font-size: 0.9rem; /* Smaller font size for buttons */
+    padding: 8px 16px;
+    width: 100%; /* Full-width buttons for very small screens */
+  }
+
+  .logo {
+    height: 50px; /* Smallest logo size for very small screens */
+  }
+
+  .header-row {
+    padding: 10px; /* Reduce padding for smaller screens */
   }
 }

@@ -18,7 +18,7 @@
 }
 
 .hero-section p {
-  font-size: 1.2rem;
+  font-size: 5rem;
   color: #555;
 }
 
@@ -33,13 +33,13 @@
 }
 
 h1 {
-  text-align: center;
+  text-align: center !important;
   font-size: 3rem;
   margin-bottom: 20px;
 }
 
 hr {
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 h2 {
@@ -49,9 +49,9 @@ h2 {
 }
 
 p {
-  font-size: 1rem;
+  font-size: 20px;
   color: #666;
-  line-height: 1.6;
+  line-height: 1;
 }
 
 a {
@@ -101,6 +101,13 @@ a:hover {
   background-color: #0056b3;
 }
 
+@media (max-width: 768px) {
+  .browse-button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}
+
 .newsletter-form {
   display: flex;
   justify-content: center;
@@ -131,7 +138,6 @@ a:hover {
 }
 
 .footer {
-  background-color: #f8f9fa;
   padding: 20px;
   text-align: center;
   border-top: 1px solid #ddd;
